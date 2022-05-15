@@ -1,21 +1,24 @@
-import styled from "../styles/Home.module.css"
+import { Typewriter } from "react-simple-typewriter";
 
 export function Home() {
-    return (<>
-        <head>
-            <link rel="styled" href="../styles/Home.module.css"/>
-        </head>
-        <body>
-            <h2 className={styled.h2 + styled.border + styled.wave} >wavy</h2>
-            <h2 class="wave">wavy</h2>
-
-            <h2 class="border two">wavy</h2>
-            <h2 class="wave two">wavy</h2>
-
-            <h2 class="border three">wavy</h2>
-            <h2 class="wave three">wavy</h2>
-        </body>
-
-    </>
+    return (
+        <div className='App'>
+    <h1
+      style={{ paddingTop: '10rem', margin: 'auto 0', fontWeight: 'normal' }}
+    >
+      Todo List {' '}
+      <span style={{ color: '##008BC6', fontWeight: 'bolder ' }}>
+        <Typewriter
+          words={['Project']}
+          cursor
+          cursorStyle='_'
+          typeSpeed={70}
+          deleteSpeed={50}
+          delaySpeed={1000}
+          onLoopDone={() => console.log(`Done after 5 loops!`)}
+        />
+      </span>
+    </h1>
+  </div>
     )
 }
